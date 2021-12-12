@@ -3,9 +3,9 @@
 A repository for the studies and the applications of different Dynamic and Complex Systems for Music and DSP
 
 
-## Bibliography
+# Bibliography
 
-# Clutterbuck Tristan, Mudd Tom, Sanfilippo D. - A Practical and Theoretical Introduction to Chaotic Musical Systems.
+### Clutterbuck Tristan, Mudd Tom, Sanfilippo D. - A Practical and Theoretical Introduction to Chaotic Musical Systems.
 
 ### Di Scipio Agostino - ‘Sound is the interface’ from interactive to ecosystemic signal processing.
 
