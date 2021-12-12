@@ -2,9 +2,10 @@
 
 A repository for the studies and the applications of different Dynamic and Complex Systems for Music and DSP
 
+### 0.00 - 0.99 Markov Chains
+### 1.00 - 1.99 Chaos Feedback Comb Filters
 
-# 0.00 - 0.99 Markov Chains
-# 1.00 - 1.99 Chaos Feedback Comb Filters
+
 
 # Bibliography
 
