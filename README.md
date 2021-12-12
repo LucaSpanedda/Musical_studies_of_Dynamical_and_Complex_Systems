@@ -3,6 +3,9 @@
 A repository for the studies and the applications of different Dynamic and Complex Systems for Music and DSP
 
 
+# 0.00 - 0.99 Markov Chains
+# 1.00 - 1.99 Chaos Feedback Comb Filters
+
 # Bibliography
 
 ### Clutterbuck Tristan, Mudd Tom, Sanfilippo D. - A Practical and Theoretical Introduction to Chaotic Musical Systems.
