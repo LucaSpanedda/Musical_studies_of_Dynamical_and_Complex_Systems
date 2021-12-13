@@ -4,8 +4,8 @@
 # $	for i in {1..100}; do python3 pdwavepy.py >> "wavetable"$i.pd; done
 # this will generate 100 pd patch with different arrays
 
-# Import the libraries
-import random
+# Import the math Library (for sin and pi)
+import math
 
 # Initializing the patch
 # Standard definitions
@@ -21,10 +21,18 @@ array = print("#X array wavetable 512 float 3;")
 # WAVETABLE GENERATOR (inside the 512 samples array)
 # -1 to +1
 print("#A")
-i = -1
-while i <= 1:
-    print(i*(random.randint(1, 1000)/1000))
-    i += 1/256
+
+# CREATION OF A PHASOR:
+phasor = 1
+# in phasorsamples you define the number of samples of your phasor
+phasorsamples = 513
+while phasor <= phasorsamples:
+	# CREATION OF A SINE OSCILLATOR:
+    osc = (math.sin((phasor/phasorsamples)*(math.pi*2)))
+    # print the values for the array
+    print(osc)
+    phasor += 1
+
 print(";")
 
 # Closing the patch
