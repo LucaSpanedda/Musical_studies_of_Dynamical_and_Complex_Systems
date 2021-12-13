@@ -3,11 +3,11 @@
 A repository for the studies and the applications of different Dynamic and Complex Systems for Music and DSP
 
 ### 0.00 - 0.99 Markov Chains
-Markov Chains and Markov chains applied to DSP and Musical Notation
+Markov chains applied to DSP and Musical Notation
 ### 1.00 - 1.49 Deterministic Chaos Functions
-ways of generating with python values out from Deterministic Chaos Function
+ways of generating with python values out from Deterministic Chaos Functions
 ### 1.50 - 1.99 pdwavepy
-values of the Function / Chaos Function generated with python,
+values of the Functions / Chaos Functions generated with python,
 used for fill an array in Pure Data for making Wavetables and table of values
 ### 2.00 - 2.19 Chaos Feedback Comb Filters
 Chaos Feedback Comb Filters in FAUST(GRAME)
