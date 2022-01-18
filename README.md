@@ -1,16 +1,70 @@
 # Musical_studies_of_Dynamical_and_Complex_Systems
-
 A repository for the studies and the applications of different Dynamic and Complex Systems for Music and DSP
 
-### 0.00 - 0.99 Markov Chains
-Markov chains applied to DSP and Musical Notation
-### 1.00 - 1.49 Deterministic Chaos Functions
-ways of generating with python values out from Deterministic Chaos Functions
-### 1.50 - 1.99 pdwavepy
-values of the Functions / Chaos Functions generated with python,
-used for fill an array in Pure Data for making Wavetables and table of values
-### 2.00 - 2.19 Chaos Feedback Comb Filters
-Chaos Feedback Comb Filters in FAUST(GRAME)
+## Sistemi Dinamici:
+Un sistema dinamico è un modello matematico che rappresenta un oggetto (sistema) 
+con un numero finito di gradi di libertà che evolve nel tempo secondo una legge deterministica; 
+Mentre per sistema complesso si intende un sistema dinamico a multicomponenti, 
+ovvero composto da diversi sottosistemi che tipicamente interagiscono tra loro.
+tipicamente un sistema dinamico viene rappresentato analiticamente da un'equazione differenziale, 
+espressa poi in vari formalismi, e identificato da un vettore nello spazio delle fasi, 
+lo spazio degli stati del sistema, dove "stato" è un termine che indica l'insieme delle grandezze fisiche, 
+dette variabili di stato, i cui valori effettivi "descrivono" il sistema in un certo istante temporale.
+Si possono identificare due tipologie di sistema dinamico:
+
+- Se l'evoluzione avviene ad intervalli discreti di tempo il sistema viene chiamato 
+sistema dinamico discreto ed è definito dall'iterazione di una funzione.
+- Se l'evoluzione è continua e definita da un'equazione differenziale, 
+il sistema viene chiamato sistema dinamico continuo.
+
+ci sono sistemi che possono non variare nel passare del tempo e sono detti
+- Sistemi tempo-invarianti.
+mentre da questi ci si aspetta un effettivo cambiamento sono detti
+- Sistemi tempo-varianti.
+
+## Equazioni differenziali:
+Un'equazione differenziale è un'equazione che lega una funzione incognita alle sue derivate.
+Può essere anche descritta come un set di equazioni relative al raggio
+di cambiamento di un numero sconosciuto e la sua derivata.
+
+ad esempio: Y = sin(Y) 
+
+Esistono dei modelli di equazioni differenziali a comportamenti caotici,
+le più famose sono:
+Lotka-Volterra, van der Pol, Lorenz,
+Rössler, Hindmarsh-Rose, and Thomas.
+
+## Sistemi Caotici: 
+Un sistema caotico è un sistema deterministico, 
+ovvero un sistema il cui comportamento futuro è determinato 
+completamente dal suo stato presente  in quelle che chiamiamo condizioni iniziali del moto. 
+In altri termini un sistema caotico amplifica le piccole differenze, 
+e soltanto quelle: porta i fenomeni microscopici a un livello macroscopico. 
+E’ dunque nell’amplificazione delle piccole deviazioni che si annida il caso.
+Il sistema solare è stabile e regolare su una scala dell’ordine del milione di anni, 
+ed è caotico su una scala di cento milioni di anni.
+Una differenza per quanto inizialmente trascurabile, 
+tende ad amplificarsi e a mettere in dubbio la validità delle predizioni 
+a lungo termine proprio come un’imprecisione sulla posiazione iniziale o degli errori di arrotondamento 
+nel corso del calcolo possono mettere in discussione il risultato finale. 
+Il problema però non è esattamente lo stesso, poiché l’errore non è nei dati ma nel modello. 
+Non è più un errore sulle variabili ma sulle equazioni. 
+Eppure il risultato è lo stesso: le traiettorie ottenute con le Equazioni di Newton 
+resteranno vicine alle traiettorie ottenute con quelle di Einstein, 
+e cio addirittura per una durata superiore al tempo caratteristico.
+Si possono definire i modelli dei sistemi caotici in due categorie: 
+
+- Modelli Stocastici
+- Modelli Deterministici
+
+Nei modelli deterministici è possibili prevedere il risultato,
+se si conoscono le condizioni iniziali del sistema ed il suo comportamento.
+Dunque a parità delle condizioni iniziali il risultato è prevedibile.
+
+Nei modelli stocastici il comportamento dipende da delle probabilità,
+che possono essere calcolate tramite il calcolo delle probabilità.
+Non è possibile dunque determinare a parità delle condizioni iniziali 
+il proprio comportamento.
 
 
 # Bibliography
