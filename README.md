@@ -1,5 +1,7 @@
 # Musical_studies_of_Dynamical_and_Complex_Systems
 A repository for the studies and the applications of different Dynamic and Complex Systems for Music and DSP
+### 0.00 - Chaos Signals
+### 8.00 - Saturators
 
 ## Sistemi Dinamici:
 Un sistema dinamico è un modello matematico che rappresenta un oggetto (sistema) 
