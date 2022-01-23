@@ -2,7 +2,7 @@
 // https://github.com/grame-cncm/faustlibraries/
 import("stdfaust.lib");
 
-// map based sinusoidal oscillator
+// letrec based sinusoidal oscillator
 
 osc(f,p) = sine
 letrec{'fb=fb+(f/sr); 'phasor=fb:intblock; 'phase=phasor+p:intblock; 'sine=phase:sinefunc;}
