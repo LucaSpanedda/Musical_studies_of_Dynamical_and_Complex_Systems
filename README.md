@@ -6,10 +6,12 @@ Un sistema dinamico è un modello matematico che rappresenta un oggetto (sistema
 con un numero finito di gradi di libertà che evolve nel tempo secondo una legge deterministica; 
 Mentre per sistema complesso si intende un sistema dinamico a multicomponenti, 
 ovvero composto da diversi sottosistemi che tipicamente interagiscono tra loro.
-tipicamente un sistema dinamico viene rappresentato analiticamente da un'equazione differenziale, 
+
+Tipicamente un sistema dinamico viene rappresentato analiticamente da un'equazione differenziale, 
 espressa poi in vari formalismi, e identificato da un vettore nello spazio delle fasi, 
 lo spazio degli stati del sistema, dove "stato" è un termine che indica l'insieme delle grandezze fisiche, 
 dette variabili di stato, i cui valori effettivi "descrivono" il sistema in un certo istante temporale.
+
 Si possono identificare due tipologie di sistema dinamico:
 
 - Se l'evoluzione avviene ad intervalli discreti di tempo il sistema viene chiamato 
@@ -17,27 +19,33 @@ sistema dinamico discreto ed è definito dall'iterazione di una funzione.
 - Se l'evoluzione è continua e definita da un'equazione differenziale, 
 il sistema viene chiamato sistema dinamico continuo.
 
-ci sono sistemi che possono non variare nel passare del tempo e sono detti
+Ci sono sistemi che possono non variare nel passare del tempo e sono detti:
+
 - Sistemi tempo-invarianti.
-mentre da questi ci si aspetta un effettivo cambiamento sono detti
+
+Mentre quando da questi ci si aspetta un effettivo cambiamento sono detti
+
 - Sistemi tempo-varianti.
 
 ## Equazioni differenziali:
 Un'equazione differenziale è un'equazione che lega una funzione incognita alle sue derivate.
+La funzione derivata di una funzione rappresenta il tasso di cambiamento di una funzione rispetto a una variabile, 
+vale a dire quindi la crescita (o decrescita) che avrebbe una funzione in uno specifico punto spostandosi di pochissimo dal punto considerato.
+
 Può essere anche descritta come un set di equazioni relative al raggio
 di cambiamento di un numero sconosciuto e la sua derivata.
 
 ad esempio: Y = sin(Y) 
 
-Esistono dei modelli di equazioni differenziali a comportamenti caotici,
-le più famose sono:
-Lotka-Volterra, van der Pol, Lorenz,
-Rössler, Hindmarsh-Rose, and Thomas.
+Esistono dei modelli di equazioni differenziali a comportamenti caotici.
+I segnali caotici possono infatti essere generati trovando soluzioni numeriche a determinate equazioni differenziali,
+o mediante l'uso iterativo di mappe di primo ritorno.
+Alcune delle equazioni differenziali più utilizzate in grado di generare segnali caotici sono:
+Lotka-Volterra, Van der Pol, Lorenz, Rössler, Hindmarsh-Rose, and Thomas.
 
 ## Sistemi Caotici: 
-Un sistema caotico è un sistema deterministico, 
-ovvero un sistema il cui comportamento futuro è determinato 
-completamente dal suo stato presente  in quelle che chiamiamo condizioni iniziali del moto. 
+Un sistema caotico è un sistema dinamico caratterizzato 
+da un'elevata sensibilità alle condizioni iniziali.
 In altri termini un sistema caotico amplifica le piccole differenze, 
 e soltanto quelle: porta i fenomeni microscopici a un livello macroscopico. 
 E’ dunque nell’amplificazione delle piccole deviazioni che si annida il caso.
