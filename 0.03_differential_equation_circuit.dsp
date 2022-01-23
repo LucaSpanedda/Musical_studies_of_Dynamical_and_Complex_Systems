@@ -3,7 +3,7 @@
 import("stdfaust.lib");
 
 // basic circuit for the iteration of a function :
-// for solve differential equations (and get chaotic behaviors)
+// for solve differential equations (without chaotic behaviors)
 
 chaosfunction(x,a) = output
 with{
