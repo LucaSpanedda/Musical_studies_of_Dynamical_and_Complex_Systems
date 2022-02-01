@@ -1,11 +1,11 @@
-## Musical_studies_of_Dynamical_and_Complex_Systems 
+# Musical_studies_of_Dynamical_and_Complex_Systems 
 ## - Codes Index
+
 A repository for the studies and the applications of different Dynamic and Complex Systems for Music and DSP
 ### 0.00 - Chaos Signals
 ### 8.00 - Saturators
 
 
-## Musical_studies_of_Dynamical_and_Complex_Systems 
 ## - Definition of the study:
 
 ## Sistemi Dinamici e Sistemi Complessi:
@@ -26,7 +26,8 @@ Sistemi tempo-varianti.
 ## Sistemi Caotici:
 
 «Può il battito delle ali di una farfalla in Brasile scatenare un tornado in Texas ?»
-(Lorenz all'American Association for the Advancement of Sciences, 1979)v
+
+(Lorenz all'American Association for the Advancement of Sciences, 1979)
 
 <<La teoria del caos postula che esista una classe di fenomeni naturali che possono essere modellati da sistemi deterministici non lineari. Il valore di ciascuna variabile nel sistema può essere molto irregolare e molto sensibile a piccole variazioni delle condizioni iniziali. In alcuni sistemi, con determinate condizioni iniziali i valori di ciascuna variabile si libreranno attorno a due o più valori (attrattori), questo assumendo una "oscillazione non periodica" - un'orbita che esiste entro limiti definiti ma non si ripete mai esattamente...
 ...anche se non presi da una prospettiva di modellazione fisica, i segnali caotici, e in particolare le oscillazioni non periodiche, rappresentano una sorta di via di mezzo tra il rumore casuale e le forme d'onda periodiche. Possono essere usati per espandere le possibilità di sintesi nella generazione di ricche texture semi-casuali con controlli di parametro precisi.>>
