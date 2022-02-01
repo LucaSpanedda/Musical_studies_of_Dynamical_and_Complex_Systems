@@ -1,8 +1,12 @@
-# Musical_studies_of_Dynamical_and_Complex_Systems - CODES INDEX
+## Musical_studies_of_Dynamical_and_Complex_Systems 
+## - Codes Index
 A repository for the studies and the applications of different Dynamic and Complex Systems for Music and DSP
 ### 0.00 - Chaos Signals
 ### 8.00 - Saturators
 
+
+## Musical_studies_of_Dynamical_and_Complex_Systems 
+## - Definition of the study:
 
 ## Sistemi Dinamici e Sistemi Complessi:
 Un sistema dinamico è un modello matematico che rappresenta un oggetto (sistema) con un numero finito di gradi di libertà che evolve nel tempo secondo una legge deterministica; Mentre per sistema complesso si intende un sistema dinamico a multicomponenti, ovvero composto da diversi sottosistemi che tipicamente interagiscono tra loro.
