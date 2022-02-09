@@ -4,7 +4,7 @@
 A repository for the studies and the applications of different Dynamic and Complex Systems for Music and DSP
 ### 0.00 - Chaos Signals
 ### 8.00 - Saturators
-
+### 9.00 - DC Blocker
 
 ## - Definition of the study:
 
