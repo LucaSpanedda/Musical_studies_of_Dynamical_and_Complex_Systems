@@ -4,7 +4,7 @@ import("stdfaust.lib");
 
 // Constrained Lorenz System Osc
 constrainedlorenz(x0,y0,z0) = 
-( constrain(x+_),constrain(y+_),constrain(z+_) : loop  ) ~ si.bus(3)
+( x+(_:constrain),y+(_:constrain),z+(_:constrain) : loop  ) ~ si.bus(3)
     with {
 
         x = x0-x0';
@@ -30,7 +30,7 @@ constrainedlorenz(x0,y0,z0) =
         with{
         // onezero + onepole = DC Blocker
         onezero =  _ <: _,mem : _,*(1) : -;
-        onepole = + ~ *(0.98);
+        onepole = + ~ *(0.95);
         // softclipping
         softclipping(L, x) = L * ma.tanh(x / L);
         // onezero ---> onepole ---> softclipping
@@ -39,6 +39,6 @@ constrainedlorenz(x0,y0,z0) =
 
     };
 
-routing(a,b,c) = c,b;
+routing(a,b,c) = a;
 
 process = constrainedlorenz(1.2,1.3,1.6) : routing;
