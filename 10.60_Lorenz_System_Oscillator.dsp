@@ -7,7 +7,7 @@ lorenzsynth
 (X_in,Y_in,Z_in,
 Sigma_in,Rho_in,Beta_in,Dt_in,
 Qoffset,Qamp,FreqCut) = 
-( x0+_,y0+_,z0+_ : loop  ) ~ si.bus(3)
+(ro.interleave(3,2) : ( x0+_,y0+_,z0+_ : loop  )) ~ si.bus(3) 
 with{
         loop(x,y,z) = 
         ma.tanh(filterTPT(FreqCut,
@@ -19,9 +19,9 @@ with{
     
         
         // System Variables
-        x0 = X_in-X_in'; 
-        y0 = Y_in-Y_in';
-        z0 = Z_in-Z_in';
+        x0 = _; 
+        y0 = _;
+        z0 = _;
         sigma = Sigma_in; // a
         rho = Rho_in; // b
         beta = Beta_in; // c
@@ -61,20 +61,24 @@ with{
 
 
 // GUI
-Qoffset = hslider("Q-Offset",10,1,100,0.01) : si.smoo;
-Qamp = hslider("Nonlinear-Q-Amp",0,0,10,0.01) : si.smoo;
-CF = hslider("Lowpass Cut Hz", 1000, 20, 20000, .001): si.smoo;
+Qoffset = hslider("[2] Q-Offset",10,1,100,0.01) : si.smoo;
+Qamp = hslider("[3] Nonlinear-Q-Amp",0,0,10,0.01) : si.smoo;
+CF = hslider("[4] Lowpass Cut Hz", 1000, 20, 20000, .001): si.smoo;
+DiracGUI = button("[0] Dirac");
+Dirac = DiracGUI-DiracGUI' > 0;
+Analoginput = checkbox("[1] Analog Input");
 routingamp1(a,b,c) = 
-a*(hslider("X-OUT1",1,0,1,0.01) : si.smoo) +
-b*(hslider("Y-OUT1",0,0,1,0.01) : si.smoo) +
-c*(hslider("Z-OUT1",0,0,1,0.01) : si.smoo) ;
+a*(hslider("[5] X-OUT1",0.1,0,1,0.01) : si.smoo) +
+b*(hslider("[6] Y-OUT1",0,0,1,0.01) : si.smoo) +
+c*(hslider("[7] Z-OUT1",0,0,1,0.01) : si.smoo) ;
 routingamp2(a,b,c) = 
-a*(hslider("X-OUT2",1,0,1,0.01) : si.smoo) +
-b*(hslider("Y-OUT2",0,0,1,0.01) : si.smoo) +
-c*(hslider("Z-OUT2",0,0,1,0.01) : si.smoo) ;
+a*(hslider("[8] X-OUT2",0.1,0,1,0.01) : si.smoo) +
+b*(hslider("[9] Y-OUT2",0,0,1,0.01) : si.smoo) +
+c*(hslider("[9] Z-OUT2",0,0,1,0.01) : si.smoo) ;
 
-process = 
-lorenzsynth
-(1.2,1.3,1.6, // X,Y,Z
+
+process = (_*Analoginput)+(Dirac*0.1) 
+<: lorenzsynth
+(_,_,_, // X,Y,Z
 10,28,2.65,0.01, //Sigma, Rho, Beta, Dt
 Qoffset,Qamp,CF) <: routingamp1, routingamp2; // GUI
