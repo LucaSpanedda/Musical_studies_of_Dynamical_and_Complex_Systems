@@ -66,7 +66,7 @@ Qamp = hslider("[3] Nonlinear-Q-Amp",0,0,10,0.01) : si.smoo;
 CF = hslider("[4] Lowpass Cut Hz", 1000, 20, 20000, .001): si.smoo;
 DiracGUI = button("[0] Dirac");
 Dirac = DiracGUI-DiracGUI' > 0;
-Analoginput = checkbox("[1] Analog Input");
+Analoginput = hslider("[1] Analog Input ",0,0,10,0.01) : si.smoo;
 routingamp1(a,b,c) = 
 a*(hslider("[5] X-OUT1",0.1,0,1,0.01) : si.smoo) +
 b*(hslider("[6] Y-OUT1",0,0,1,0.01) : si.smoo) +
