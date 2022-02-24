@@ -3,6 +3,7 @@
 
 A repository for the studies and the applications of different Dynamic and Complex Systems for Music and DSP
 ### Python Codes
+### 0.00 - Filters
 ### 10.00 - Chaotic Signals
 ### 2.00 - Utilities
 ### 8.00 - Saturators
