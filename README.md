@@ -198,6 +198,9 @@ o in scala più grande all'universo stesso che a sua volta contiene tutti gli el
 
 # Bibliography
 
+Chiusoli Simone - La mappa logistica come caso di studio per
+riflettere sull’interdisciplinarità nei sistemi complessi.
+
 Clutterbuck Tristan, Mudd Tom, Sanfilippo D. - A Practical and Theoretical Introduction to Chaotic Musical Systems.
 
 Di Scipio Agostino - ‘Sound is the interface’ from interactive to ecosystemic signal processing.
