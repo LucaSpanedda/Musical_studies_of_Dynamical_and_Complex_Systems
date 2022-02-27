@@ -98,9 +98,13 @@ Lo state variable filter di Zavalishin permette di avere uno strumento che al va
 varia comportamenti e permette di ottenere uno strumento di regolazione variabile ad-hoc.
 
 
-## Principi di Feedback nei sistemi audio digitali e nei sistemi analogici:
+## Principi di Feedback nei sistemi audio digitali e analogici:
 
-un feedback acustico consiste nel ritorno di un suono fra una sorgente e un recettore,
+Il feedback è un importante condizione alla base dei sistemi caotici dinamici:
+avviene quando vi è circolarità fra causa ed effetti;
+ovvero quando gli effetti di un processo tornano ad influenzare 
+il processo stesso.
+Il feedback acustico consiste nel ritorno di un suono fra una sorgente e un recettore,
 (ad esempio un microfono ed un altoparlante)
 in un circuito di retroazione a guadagno potenzialmente infinito.
 Nel feedback analogico il segnale viene emesso da una sorgente 
@@ -108,9 +112,13 @@ e captato da un ricettore all'interno di un ambiente.
 E a seconda delle variabili del sistema, quali: 
 condizioni dell'ambiente, distanza fra sorgente e ricettore, 
 risposta in frequenza dei due e risonanze della stanza, 
-una frequenza in fase con il segnale viene a sommarsi ad esso 
-e viene amplificata e riprodotta a sua volta con ampiezza via via crescente. 
-Per evitare questo comportamento invece, 
+e più in generale ogni minimo trasferimento 
+non lineare in qualsiasi componente relativa al suono,
+porterà all'influenza in qualche modo del processo di feedback.
+In alcuni casi  una frequenza in fase con il segnale viene a sommarsi ad esso 
+e viene amplificata e riprodotta a sua volta con ampiezza via via crescente 
+- Effetto Larsen -
+in altri casi, per evitare questo comportamento,
 e dunque l'intonazione del feedback ad una determinata frequenza, 
 bisogna introdurre delle non linearità nel sistema di feedback. 
 Queste non linearità nel mondo fisico appartengono alla sua natura stessa
