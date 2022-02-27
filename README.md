@@ -184,6 +184,13 @@ Quando si vuole raggiungere un qualche tipo di equilibrio di un sistema
 instabile ci si sta ponendo un problema di adattività, ed ottimizzazione.
 Uno strumento per l'adattività come abbiamo visto sono le costrizioni matematiche.
 
+## L'Organizzazione Gerarchica:
+Spesso nei sistemi complessi sono presenti più livelli di organizzazione
+che possono essere pensati come se formassero una struttura gerarchica
+di più sistemi e sottoinsiemi interagenti. 
+Basti pensare al cervello, ad un ecosistema, o a una cellula...
+o in scala più grande all'universo stesso che a sua volta contiene tutti gli elementi precedenti.
+
 
 # Bibliography
 
