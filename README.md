@@ -12,7 +12,8 @@ A repository for the studies and the applications of different Dynamic and Compl
 ## - Definition of the study:
 
 ## Sistemi Dinamici e Sistemi Complessi:
-Un sistema dinamico è un modello matematico che rappresenta un oggetto (sistema) con un numero finito di gradi di libertà che evolve nel tempo secondo una legge deterministica; Mentre per sistema complesso si intende un sistema dinamico a multicomponenti, ovvero composto da diversi sottosistemi che tipicamente interagiscono tra loro.
+Un sistema dinamico è un modello matematico che rappresenta un oggetto (sistema) con un numero finito di gradi di libertà che evolve nel tempo secondo una legge deterministica; Mentre per sistema complesso si intende un sistema dinamico a multicomponenti, 
+ovvero composto da diversi sottosistemi che tipicamente interagiscono tra loro.
 
 Tipicamente un sistema dinamico viene rappresentato analiticamente da un'equazione differenziale, espressa poi in vari formalismi, e identificato da un vettore nello spazio delle fasi, lo spazio degli stati del sistema, dove "stato" è un termine che indica l'insieme delle grandezze fisiche, dette variabili di stato, i cui valori effettivi "descrivono" il sistema in un certo istante temporale.
 
@@ -21,9 +22,9 @@ Si possono identificare due tipologie di sistema dinamico:
 Se l'evoluzione avviene ad intervalli discreti di tempo il sistema viene chiamato sistema dinamico discreto ed è definito dall'iterazione di una funzione.
 Se l'evoluzione è continua e definita da un'equazione differenziale, il sistema viene chiamato sistema dinamico continuo.
 Ci sono sistemi che possono non variare nel passare del tempo e sono detti:
-Sistemi tempo-invarianti.
+- Sistemi tempo-invarianti.
 Mentre quando da questi ci si aspetta un effettivo cambiamento sono detti
-Sistemi tempo-varianti.
+- Sistemi tempo-varianti.
 
 
 ## Sistemi Caotici:
@@ -48,15 +49,16 @@ In altri termini un sistema caotico amplifica le piccole differenze: porta i fen
 Il sistema solare è stabile e regolare su una scala dell’ordine del milione di anni, ed è caotico su una scala di cento milioni di anni. Una differenza per quanto inizialmente trascurabile, tende ad amplificarsi e a mettere in dubbio la validità delle predizioni a lungo termine proprio come un’imprecisione sulla posiazione iniziale o degli errori di arrotondamento nel corso del calcolo possono mettere in discussione il risultato finale. 
 Il problema però non è esattamente lo stesso, poiché l’errore non è nei dati ma nel modello. 
 Non è più un errore sulle variabili ma sulle equazioni. 
-Si possono definire i modelli dei sistemi caotici in due categorie:
+I sistemi caotici, proprio come quelli stocastici, appartengono alla classe dei sistemi dinamici e
+dei sistemi complessi. Solo che mentre nei sistemi caotici i comportamenti sono deterministici
+ed è possibile prevedere il risultato se si conoscono le condizioni iniziali del sistema ed il suo
+comportamento, e dunque a parità delle condizioni iniziali il risultato è prevedibile.
+Nei modelli stocastici il comportamento dipende da delle probabilità, che possono essere calcolate
+tramite il calcolo delle probabilità. Non è possibile dunque determinare a parità delle condizioni
+iniziali il proprio comportamento:
 
-Modelli Stocastici
-Modelli Deterministici
-
-Nei modelli deterministici è possibile prevedere il risultato, se si conoscono le condizioni iniziali del sistema ed il suo comportamento. Dunque a parità delle condizioni iniziali il risultato è prevedibile.
-
-Nei modelli stocastici il comportamento dipende da delle probabilità, che possono essere calcolate tramite il calcolo delle probabilità. Non è possibile dunque determinare a parità delle condizioni iniziali il proprio comportamento.
-
+- Modelli Stocastici
+- Modelli Deterministici
 
 ## Equazioni differenziali:
 
@@ -66,7 +68,15 @@ Può essere anche descritta come un set di equazioni relative al raggio di cambi
 
 ad esempio: Y = sin(Y)
 
-Esistono dei modelli di equazioni differenziali a comportamenti caotici. I segnali caotici possono infatti essere generati trovando soluzioni numeriche a determinate equazioni differenziali, o mediante l'uso iterativo di mappe di primo ritorno. Alcune delle equazioni differenziali più utilizzate in grado di generare segnali caotici sono: Lotka-Volterra, Van der Pol, Lorenz, Rössler, Hindmarsh-Rose, and Thomas.
+Esistono dei modelli di equazioni differenziali a comportamenti caotici. I segnali caotici possono infatti essere generati trovando soluzioni numeriche a determinate equazioni differenziali, o mediante l'uso iterativo di mappe di primo ritorno. Alcune delle equazioni differenziali più utilizzate in grado di generare segnali caotici sono: 
+
+- Lotka-Volterra 
+- Van der Pol
+- Lorenz
+- Rössler
+- Hindmarsh-Rose
+- Thomas
+- Duffing oscillator.
 
 
 ## Costringere le funzioni:
@@ -79,12 +89,17 @@ a contenere il sistema in un range di valori desiderati.
 
 alcuni metodi possono essere:
 
-Il Wavefolding = finestra triangolare.
+- Il Wavefolding
+- Il Waveshaping
+per la saturazione del segnale.
+Ad esempio il Soft Clipping tramite la funzione tangente, 
+costringe il segnale mappando come massimo o minimo valore
+numeri tra - e + infinito ad numeri fra -1 ed +1. 
+In questo modo posso esplorare diversi velori del sistema.
 
-Il Soft Clipping = la funzione tanh, costringe il segnale mappando come massimo o minimo valore
-numeri tra - e + infinito a numero fra 0 e 1. In questo modo posso esplorare diversi velori del sistema.
-
-il DC Blocker = è uno strumento che costringe un valore fisso, ad essere interpretato
+Oppure:
+- Il DC Blocker
+per costringere un valore fisso, ad essere interpretato
 come un valore all'interno delle fasi e ad essere attenuato e riportato a 0.
 Infatti un valore DC può essere interpretato come un segnale a frequenza 0.
 Il DC Blocker interviene nella differenza fra due numeri, più due campioni hanno di differenza meno sarà 
@@ -129,6 +144,9 @@ Infatti di norma i comportamenti del computer a differenza di quelli in natura s
 
 ## Retroazione positiva e negativa, linearità e non-linearità:
 
+- Retroazione Positiva
+- Retroazione Negativa
+
 La retroazione positiva tende ad accelerare un processo, 
 mentre la retroazione negativa a rallentarlo. 
 La retroazione negativa aiuta a mantenere la stabilità di un sistema, 
@@ -145,12 +163,26 @@ vuole dire portare questo verso comportamenti non prevedibili, complessi.
 Questi due comportamenti possono essere ottenuti per l'appunto
 sia velocizzando che rallentando questi processi, 
 in maniera dipendente dal caso specifico.
-
 I filtri digitali o analogici per l'audio,
 possono essere pensati ad esempio come uno strumento
 di contrasto rispetto a questo tipo di comportamenti:
 dove se si allineano le fasi si creano dei poli,
 mentre se si disallineano si punta alla complessità del sistema.
+
+## L'auto-organizzazione:
+Una condizione necessaria affinché un sistema possa essere definito 
+complesso è che questo tenda ad un qualce tipo di ordine spontaneo.
+Tuttavia l'ordine di cui parliamo nei sistemi complessi non
+è un concetto di ordine assoluto globale degli elementi,
+ma piuttosto un concetto di stabilità distribuito.
+Si può dunque parlare di condizioni di
+
+- Stabilità del sistema
+- Instabilità del sistema
+
+Quando si vuole raggiungere un qualche tipo di equilibrio di un sistema
+instabile ci si sta ponendo un problema di adattività, ed ottimizzazione.
+Uno strumento per l'adattività come abbiamo visto sono le costrizioni matematiche.
 
 
 # Bibliography
