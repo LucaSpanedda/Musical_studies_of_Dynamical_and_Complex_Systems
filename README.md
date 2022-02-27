@@ -37,9 +37,11 @@ e dunque di fatto imprevedibili, ma deterministici
 
 (Lorenz all'American Association for the Advancement of Sciences, 1979)
 
-<<La teoria del caos postula che esista una classe di fenomeni naturali che possono essere modellati da sistemi deterministici non lineari. Il valore di ciascuna variabile nel sistema può essere molto irregolare e molto sensibile a piccole variazioni delle condizioni iniziali. In alcuni sistemi, con determinate condizioni iniziali i valori di ciascuna variabile si libreranno attorno a due o più valori (attrattori), questo assumendo una "oscillazione non periodica" - un'orbita che esiste entro limiti definiti ma non si ripete mai esattamente...
-...anche se non presi da una prospettiva di modellazione fisica, i segnali caotici, e in particolare le oscillazioni non periodiche, rappresentano una sorta di via di mezzo tra il rumore casuale e le forme d'onda periodiche. Possono essere usati per espandere le possibilità di sintesi nella generazione di ricche texture semi-casuali con controlli di parametro precisi.>>
+«La teoria del caos postula che esista una classe di fenomeni naturali che possono essere modellati da sistemi deterministici non lineari. Il valore di ciascuna variabile nel sistema può essere molto irregolare e molto sensibile a piccole variazioni delle condizioni iniziali. In alcuni sistemi, con determinate condizioni iniziali i valori di ciascuna variabile si libreranno attorno a due o più valori (attrattori), questo assumendo una "oscillazione non periodica" - un'orbita che esiste entro limiti definiti ma non si ripete mai esattamente...
+...anche se non presi da una prospettiva di modellazione fisica, i segnali caotici, e in particolare le oscillazioni non periodiche, rappresentano una sorta di via di mezzo tra il rumore casuale e le forme d'onda periodiche. Possono essere usati per espandere le possibilità di sintesi nella generazione di ricche texture semi-casuali con controlli di parametro precisi.»
+
 – Jamie Dunkle, 15/4/2015
+
 
 Ciò che accomuna un sistema complesso a un sistema caotico è la non linearità. 
 In questa visione di complessità i sistemi caotici sono considerati un sottoinsieme dei sistemi complessi: 
