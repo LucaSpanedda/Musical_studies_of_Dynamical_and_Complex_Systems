@@ -21,11 +21,15 @@ Si possono identificare due tipologie di sistema dinamico:
 
 Se l'evoluzione avviene ad intervalli discreti di tempo il sistema viene chiamato sistema dinamico discreto ed è definito dall'iterazione di una funzione.
 Se l'evoluzione è continua e definita da un'equazione differenziale, il sistema viene chiamato sistema dinamico continuo.
-Ci sono sistemi che possono non variare nel passare del tempo e sono detti:
+Ci sono sistemi che possono non variare nel passare del tempo ed altri da cui ci si aspetta un effettivo cambiamento,
+e sono detti rispettivamente:
+
 - Sistemi tempo-invarianti.
-Mentre quando da questi ci si aspetta un effettivo cambiamento sono detti
 - Sistemi tempo-varianti.
 
+In generale i sistemi complessi sono sistemi dinamici caotici,
+e dunque di fatto imprevedibili, ma deterministici
+(per questo si parla di Caos Deterministico).
 
 ## Sistemi Caotici:
 
