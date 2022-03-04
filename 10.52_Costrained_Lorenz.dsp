@@ -32,5 +32,5 @@ lorenz(x0,y0,z0,sigma,rho,beta,dt,l) = loop ~ si.bus(3) : par(i, 3, /(l))
             saturator(l, dcblocker(1,0.995,(z + (x * y - beta * z) * dt + z_init)));
     };
 
-
-process = lorenz(1.2,1.3,1.6,48,3,1,0.5,32) :> /(3) <: _ , _;
+routing(a,b,c) = (a+b+c)/3;
+process = lorenz(1.2,1.3,1.6,48,3,1,0.5,32) : routing <: _,_;
