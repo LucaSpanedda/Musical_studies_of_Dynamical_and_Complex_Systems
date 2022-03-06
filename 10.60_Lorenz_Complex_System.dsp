@@ -2,11 +2,34 @@
 // https://github.com/grame-cncm/faustlibraries/
 import("stdfaust.lib");
 
+
+
+// GUI for the Filter / Lorenz
+Treshold = hslider("Saturation limit", 4, 1, 1024, .000001);
+CFblock = hslider("DC Blocker FCut", 20, ma.EPSILON, 100, .001);
+CF = hslider("Frequency Cut", 1000, 20, 24000 - 20, .001);
+Q = hslider("Filter-Q", 0, -60, 60, .001) : ba.db2linear;
+K = hslider("Filter-K", 0, -60, 60, .001) : ba.db2linear;
+Glp = checkbox("lowpass"); 
+Ghp = checkbox("highpass"); 
+Gbp = checkbox("bandpass"); 
+Gnotch = checkbox("notch"); 
+Gapf = checkbox("allpass"); 
+Gubp = checkbox("ubandpass"); 
+Gpeak = checkbox("peak"); 
+Gbshelf = checkbox("bshelf"); 
+Dirac = button("[0] Dirac");
+s = hslider("[1] Sigma", 10, 0, 100, 0.000001);
+r = hslider("[2] Rho", 28, 0, 100, 0.000001);
+b = hslider("[3] Beta", 8/3, 0, 100, 0.000001);                
+dt = hslider("[4] dt (integration step)", 0.005, 0.000001, 1, .000001);
+
+
+
 // costrained = input --> SVFTPT --> dcblocker --> saturator
 costrained(Treshold,CFblock, K, Q, CF, Glp , Ghp , Gbp, Gnotch, Gapf, Gubp, Gpeak, Gbshelf, x) 
 = routingout
 with{
-
 saturator(Treshold,x) = Treshold*ma.tanh(x/(max(Treshold,ma.EPSILON)));
 dcblocker(CFblock,x) = x : fi.highpass(1,CFblock);
 SVFTPT(K, Q, CF, Glp , Ghp , Gbp, Gnotch, Gapf, Gubp, Gpeak, Gbshelf, x) = circuitout
@@ -36,37 +59,18 @@ SVFTPT(K, Q, CF, Glp , Ghp , Gbp, Gnotch, Gapf, Gubp, Gpeak, Gbshelf, x) = circu
     circuitout = circuit ~ si.bus(2) : circuitrouting;
     };
 
-    routingout = 
-        saturator(Treshold,
-            dcblocker(CFblock,
-                SVFTPT(K, Q, CF, Glp , Ghp , Gbp, Gnotch, Gapf, Gubp, Gpeak, Gbshelf, x)
-            )
-        );
+routingout = 
+    saturator(Treshold,
+        dcblocker(CFblock,
+            SVFTPT(K, Q, CF, Glp , Ghp , Gbp, Gnotch, Gapf, Gubp, Gpeak, Gbshelf, x)
+        )
+    );
+};
 
-    };
-
-// GUI for the Filter
-Treshold = hslider("Saturation limit", 4, 1, 1024, .000001);
-CFblock = hslider("DC Blocker FCut", 20, ma.EPSILON, 100, .001);
-CF = hslider("Frequency Cut", 1000, 20, 24000 - 20, .001);
-Q = hslider("Filter-Q", 0, -60, 60, .001) : ba.db2linear;
-K = hslider("Filter-K", 0, -60, 60, .001) : ba.db2linear;
-Glp = checkbox("lowpass"); 
-Ghp = checkbox("highpass"); 
-Gbp = checkbox("bandpass"); 
-Gnotch = checkbox("notch"); 
-Gapf = checkbox("allpass"); 
-Gubp = checkbox("ubandpass"); 
-Gpeak = checkbox("peak"); 
-Gbshelf = checkbox("bshelf"); 
-Dirac = button("[0] Dirac");
-s = hslider("[1] Sigma", 10, 0, 100, 0.000001);
-r = hslider("[2] Rho", 28, 0, 100, 0.000001);
-b = hslider("[3] Beta", 8/3, 0, 100, 0.000001);                
-dt = hslider("[4] dt (integration step)", 0.005, 0.000001, 1, .000001);
 
 // (lorenz eq. ---> costrained) x3
-lorenz(x0,y0,z0,sigma,rho,beta,dt,Treshold,CFblock, K, Q, CF, Glp , Ghp , Gbp, Gnotch, Gapf, Gubp, Gpeak, Gbshelf) = loop ~ si.bus(3) : par(i, 3, /(Treshold))
+lorenz(x0,y0,z0,sigma,rho,beta,dt,Treshold,CFblock, K, Q, CF, Glp , Ghp , Gbp, Gnotch, Gapf, Gubp, Gpeak, Gbshelf) 
+= loop ~ si.bus(3) : par(i, 3, /(Treshold))
     with {
 
         x_init = (x0-x0');
@@ -85,6 +89,8 @@ lorenz(x0,y0,z0,sigma,rho,beta,dt,Treshold,CFblock, K, Q, CF, Glp , Ghp , Gbp, G
         );
         
     };
+
+
 
 routing(a,b,c) = (a+b+c)/3;
 process = 
