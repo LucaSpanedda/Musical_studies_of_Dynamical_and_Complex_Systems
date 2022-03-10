@@ -146,9 +146,11 @@ molto lontani da quelli prodotti nel mondo fisico,
 a causa della natura precisa e tempo-invariante della loro generazione 
 del segnale nel mondo digitale.
 Nel computer, i dettagli che in natura nel suono si verificano normalmente 
-in modo imprevedibile, devono essere accuratamente sequenziati fino al punto di esaurimento delle risorse del computer e del programmatore.
+in modo imprevedibile, devono essere accuratamente sequenziati 
+fino al punto di esaurimento delle risorse del computer e del programmatore.
 Adottare segnali caotici nella sintesi e nel controllo, 
-può essere dunque un modo per produrre suoni più naturali di quelli generati attraverso le tecniche standard di sintesi digitale, 
+può essere dunque un modo per produrre suoni più naturali 
+di quelli generati attraverso le tecniche standard di sintesi digitale, 
 con metodi computazionali economici.
 
 \pagebreak
