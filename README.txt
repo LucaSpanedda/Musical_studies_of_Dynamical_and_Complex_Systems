@@ -331,6 +331,31 @@ tutti gli elementi precedenti.
 
 \pagebreak
 --------------------------------------------------------------------------------
+COMPORTAMENTO EMERGENTE
+--------------------------------------------------------------------------------
+
+Nell'analisi e nel disegno di un sistema complesso 
+bisogna prendere in considerazione 
+il comportamento collettivo, questo comportamento 
+viene chiamato comportamento emergente, 
+e sta ad indicare l'andamento non lineare o lineare
+che emerge dalla collaborazione delle parti.
+Le proprietà dei comportamenti emergenti
+nei sistemi complessi sono difficilmente predicibili,
+poichè l'insieme delle leggi che governa le componenti singolarmente,
+non vale nel caso di una collaborazione collettiva di queste 
+all'interno di un sistema.
+Bisogna studiare il sistema nel suo insieme complesso per verificare
+il comportamento che ne emerge.
+Tuttavia possiamo dire che l'aumento di componenti in un sistema complesso 
+determina un cambiamento non solo quantitativo ma anche qualitativo.
+Si può pensare questo nel caso esemplare di una discretizzazione 
+virtual analog di un circuito, più si aggiungono
+dettagli più ci si avvicina al comportamento nel mondo analogico.
+- Warren, more is different 1972.
+
+\pagebreak
+--------------------------------------------------------------------------------
 BIBLIOGRAFIA:
 --------------------------------------------------------------------------------
 
@@ -367,32 +392,3 @@ Wiener  Norbert - La cibernetica. Controllo e comunicazione nell'animale e nella
 Wiener  Norbert - The Human Use of Human Beings Cybernetics and Society.
 
 Wishart Trevor - On Sonic Art (Contemporary Music Studies).
-
-
-
-\pagebreak
---------------------------------------------------------------------------------
-APPUNTI:
---------------------------------------------------------------------------------
-
-Nell'analisi e nel disegno di un sistema complesso 
-bisogna prendere in considerazione 
-innanzitutto il comportamento collettivo.
-
-L'aumento di componenti in un sistema determina un cambiamento
-non solo quantitativo ma anche qualitativo.
-Si può pensare questo nel caso esemplare di una discretizzazione 
-virtual analog di un circuito, più si aggiungono
-dettagli più ci si avvicina al comportamento nel mondo analogico.
-- Warren, more is different 1972.
-
-Compito che la fisica avrebbe dovuto affrontare:
-Capire le relazioni microscopiche e macroscopiche di un sistema.
-
-Heylighen e Joslyn identificano tre meccanismi di
-controllo nei sistemi cibernetici e autoregolatori.
-utili nel disegno di questi sistemi.
-
-- Retroazione positiva
-- Retroazione negativa
-- Comportamenti di Feedback
