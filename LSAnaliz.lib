@@ -1,0 +1,25 @@
+// FAUST standard library
+import("stdfaust.lib");
+// THIS library
+ANZ = library("LSAnaliz.lib");
+
+/*
+Alanlize in RealTime Audio Content library:
+*/
+ 
+LocalmaxContinuous = _ : abs <: loop ~_
+with{
+    loop(x) = ((_ , x) : max);
+    };
+
+LocalmaxSec(S) = _ : abs <: loop ~_
+with{
+    loop(x) = ((_ , (x*(1-Trainpulse))) : max);
+    Trainpulse = (+(1) : %(ma.SR*S))~ _ <: (_ < (_:mem));
+    };
+
+// LAR S = Sec.
+// Feedback counterbalancing via simple "LAR" mechanism
+// LAR mechanism: Audio Feedback with Self-regulated Gain - REFERENCE (Agostino Di Scipio)
+// https://echo.orpheusinstituut.be/article/a-relational-ontology-of-feedback#audio
+LAR(S) = _ <: *(1-an.rms_envelope_rect(S));
