@@ -1,17 +1,32 @@
 // FAUST standard library
 import("stdfaust.lib");
 // THIS library
-ANZ = library("LSAnaliz.lib");
+ANRT = library("LSAnalizRT.lib");
 
 /*
-Alanlize in RealTime Audio Content library:
+Analize in RealTime Audio Content library:
 */
- 
+
+// TO DO:
+//
+// PEAKHOLDER
+// https://www.cs.princeton.edu/courses/archive/spr05/cos579/DSP/DSP.html
+//
+
+// smooth function (Onepole Filter)
+Smooth(G) = *(1-G) : +~*(G);
+
+// Conversions Formula: dB to a linear gain (0-1) and linear to dB
+lineartodB(G) = 20.0*log10(max(ma.MIN, G));
+dBtolinear(G) = pow(10.0, G/20.0);
+
+// Hold The Max Value
 LocalmaxContinuous = _ : abs <: loop ~_
 with{
     loop(x) = ((_ , x) : max);
     };
 
+// Hold The Max Value for a Frame in Seconds
 LocalmaxSec(S) = _ : abs <: loop ~_
 with{
     loop(x) = ((_ , (x*(1-Trainpulse))) : max);
