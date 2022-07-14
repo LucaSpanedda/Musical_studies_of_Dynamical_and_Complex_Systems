@@ -1,4 +1,8 @@
-# ATTRATTORE DI LORENZ
+#######################################
+
+# ATTRATTORE DI LORENZ by Luca Spanedda
+
+#######################################
 
 # Librerie
 import sys
@@ -48,3 +52,31 @@ for j in range (0,iterazioni):
 xwrite.close()
 ywrite.close()
 zwrite.close()
+
+
+
+#######################################
+
+# Phase Space 3D Plot
+
+#######################################
+
+# Plot
+xplt = np.loadtxt("x.txt")
+yplt = np.loadtxt("y.txt")
+zplt = np.loadtxt("z.txt")
+
+# name output
+nomeplot = input("Enter your file name (without extension):")
+
+fig = plt.figure()
+ax = Axes3D(fig) 
+
+ax.plot(xplt, yplt, zplt, color='g', alpha=0.7, linewidth=0.6)
+ax.set_xlabel("X")
+ax.set_ylabel("Y")
+ax.set_zlabel("Z")
+ax.set_title("Phase Space")
+
+# save output
+plt.savefig(nomeplot+".png")
